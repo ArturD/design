@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title Lernhub
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .head
+      %button.btn.primary login
+      %button.btn.primary logout
+      %input#search-box{:placeholder => 'Szukaj'}
+    .content-container-wrapper
+      .content-container-shadow-top
+      .content-container-shadow-mid
+        .content-head
+          %h2.subject Matematyka
+          .breadcrumbs
+            Artur > Matamatyka > klasa 1 > lekcja 10
+          .info
+            .info-element Ostatnia modyfikacja: 12.10.2012
+            .info-element Liczba Odwiedzin: 2000
+        .content-container
+          = yield
+      .content-container-shadow-bottom
+
